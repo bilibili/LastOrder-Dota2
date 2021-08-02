@@ -97,6 +97,8 @@
 
 # Additional links 
 
+https://arxiv.org/abs/1912.06680
+
 https://github.com/TimZaman/dotaservice
 
 https://developer.valvesoftware.com/wiki/Dota_Bot_Scripting
@@ -200,6 +202,8 @@ Finally, select Shadow Fiend to start the game:
 ![page2image5](./Pictures/image-5.png)
 
 # Additional links 
+
+https://arxiv.org/abs/1912.06680
 
 https://github.com/TimZaman/dotaservice
 
