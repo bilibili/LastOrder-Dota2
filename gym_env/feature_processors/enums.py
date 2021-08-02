@@ -1,0 +1,126 @@
+HISTORY_HEALTH_NUM = 12
+UNIT_NUM = 30 # 最多存多少个unit
+HERO_NUM = 2 # 多少个英雄，目前不考虑召唤物,只选择player和对手
+MODIFIER_NUM = 8 # 多少buff
+ITEM_NUM = 9
+ABILITY_NUM = 6
+DOUBLE_ACTION_PARA_TYPE = ['MOVE', 'ATTACK_ENEMY', 'ATTACK_SELF']
+All_ACTION_TYPE = [
+    "MOVE",
+    "STOP",
+    "ATTACK_ENEMY",
+    "ATTACK_SELF",
+    "ABILITY_Q",
+    "ABILITY_W",
+    "ABILITY_E",
+    "ABILITY_R",
+    "ATTACK_HERO",
+    "ATTACK_TOWER",
+    "FLASK",
+    "CLARITY",
+    "MANGO",
+    "PLANT",
+    "EAT_TREE",
+    "MAGIC_STICK",
+    "FAERIE_FIRE",
+    "ATTACK_WARD",
+    "USE_WARD",
+    "USE_SENTRY_WARD",
+]
+
+All_CB_ACTION_TYPE = [
+    "MOVE",
+    "STOP",
+    "ATTACK_ENEMY",
+    "ATTACK_SELF",
+    "ABILITY_Q",
+    "ABILITY_W",
+    "ABILITY_E",
+    "ABILITY_R",
+    "ATTACK_HERO",
+    "ATTACK_TOWER",
+    "FLASK",
+    "CLARITY",
+]
+
+ACTION_NAME_TO_INDEX = {
+    "MOVE": 0,
+    "STOP": 1,
+    "ATTACK_ENEMY": 2,
+    "ATTACK_SELF": 3,
+    "ABILITY_Q": 4,
+    "ABILITY_W": 5,
+    "ABILITY_E": 6,
+    "ABILITY_R": 7,
+    "ATTACK_HERO": 8,
+    "ATTACK_TOWER": 9,
+    "FLASK": 10,
+    "CLARITY": 11,
+    "MANGO": 12,
+    "PLANT": 13,
+    "EAT_TREE": 14,
+    "MAGIC_STICK": 15,
+    "FAERIE_FIRE": 16,
+    "ATTACK_WARD": 17,
+    "USE_WARD": 18,
+    "USE_SENTRY_WARD": 19
+}
+
+NEARBY_MAP_SIZE = 8
+
+DECAY_RATE = 0.6
+
+ITEM_BRANCH_ID = 16
+ITEM_CLARITY_ID = 38
+ITEM_FLASK_ID = 39
+ITEM_BOTTLE_ID = 41
+ITEM_WARD_ID = 42
+ITEM_WARD_SENTRY_ID = 43
+ITEM_TANGO_ID = 44
+ITEM_MANGO_ID = 216
+ITEM_FAERIE_FIRE_ID = 237
+ITEM_MAGIC_STICK_ID = 34
+ITEM_MAGIC_WAND_ID = 36
+ITEM_CIRCLET = 20
+ITEM_BRACER = 73
+ITEM_WRAITH = 75
+ITEM_LESSER_CRIT = 149
+ITEM_WARD_DISPENSER_ID = 218 # 叠加在一起的真假眼
+ITEM_BOOTS = 29
+
+TP_SLOT = 15
+
+LEVEL_TO_RESPAWNTIME = {
+    1: 12,
+    2: 15,
+    3: 18,
+    4: 21,
+    5: 24,
+    6: 26,
+    7: 28,
+    8: 30,
+    9: 32,
+    10: 34,
+    11: 36,
+    12: 44,
+    13: 46,
+    14: 48,
+    15: 50,
+    16: 52,
+    17: 54,
+    18: 65,
+    19: 70,
+    20: 75,
+    21: 80,
+    22: 85,
+    23: 90,
+    24: 95,
+    25: 100,
+    26: 100,
+    27: 100,
+    28: 100,
+    29: 100,
+    30: 100
+}
+
+TARGET_DISTANCE = 580

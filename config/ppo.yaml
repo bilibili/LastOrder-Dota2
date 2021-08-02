@@ -1,0 +1,28 @@
+default: &default
+  clip_range: 0.2
+  action_entropy_parameter: 0.001
+  learning_rate: 0.0001
+  output_shape: 19
+  pre_action_length: 1
+  n_steps: 150
+  discount_rate: 0.997
+  gae_lam: 0.95
+  n_lstm: 500
+
+  share_feature_shape: 116
+  player_feature_shape: 110
+  player_num: 4
+  total_player_num: 5
+  env_name: "dota2_1_vs_1"
+  feature_processor: "features_v0"
+  reward_processor: "rewarder_v0"
+  dota_model: "ppo"
+
+  exp_name: "master_baseline"
+
+development:
+  <<: *default
+  n_steps: 20
+
+production:
+  <<: *default
