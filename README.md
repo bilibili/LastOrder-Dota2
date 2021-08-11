@@ -17,7 +17,7 @@
 
 （以Windows为例）
 
-1. 修改gym_env/dota_game.py中的Dota2客户端路径。
+1. 修改play_with_human_local.py中的Dota2客户端路径。
 
    根据下图路径的示例修改为对应路径。
 
@@ -67,7 +67,7 @@
 
 # 启动对战
 
-首先启动steam,注意steam的用户名应为英文，否则会出现错误。
+首先启动steam。
 
 在上面说明中安装好python3.8和依赖库之后，在管理员模式运行的 powershell 进入项目根目录。执行下面命令即可启动游戏。
 
@@ -127,7 +127,7 @@ This library provides a Dota 2 Shadow Fiend solo AI trained by reinforcement lea
 
 (Take Windows as an example)
 
-1. Modify the path of Dota2 client in gym_env/dota_game.py.
+1. Modify the path of Dota2 client in play_with_human_local.py.
 
    Modify it to the corresponding path according to the example of the path below.
 
@@ -171,7 +171,7 @@ This library provides a Dota 2 Shadow Fiend solo AI trained by reinforcement lea
 
 # Start the game
 
-First open steam, note that the username of steam should be English, otherwise there will be an error.
+First open steam.
 
 After installing python 3.8 and the dependencies in the above instructions, run powershell in admin mode and enter the project root directory. Execute the following command to start the game.
 

@@ -77,24 +77,6 @@ class PPOAgent(BaseAgent):
             "dota_chatwheel_label_chaos_knight_2" # 久仰大名
         ]
 
-        # 反补发言
-        self.deny_msg = ["dota_chatwheel_label_nevermore_4", "dota_chatwheel_label_nevermore_deny", "^_^", "!", "?"]
-
-        # 嘲讽
-        self.taunt_msg = [
-            "^_^",
-            "dota_chatwheel_label_nevermore_deny", # 你技术可真差
-            "dota_chatwheel_label_tiny_2", # 脑袋里面进石头了
-            "dota_chatwheel_label_queenofpain_2", # 疼吗
-            "dota_chatwheel_label_queenofpain_3", # 我喜欢你抵抗的样子
-            "dota_chatwheel_label_troll_warlord_3", # 试着别去送
-            "dota_chatwheel_label_zuus_3" # 杀你就这么简单
-        ]
-
-        self.dead_msg = [
-            "dota_chatwheel_label_lich_5", # 啊，冰蛙!
-        ]
-
         self.chat_flag = False
 
         if self.running_mode in ["self_eval"]:
@@ -542,25 +524,6 @@ class PPOAgent(BaseAgent):
         if len(self.wel_msg) > 0 and obs_dict.dota_time > 0:
             msg = self.wel_msg.pop(0)
             self.ex_actions.append(self.basic_action.chat(msg))
-
-        if self.chat_flag and len(self.player_events_history_info) > 2 and \
-                self.player_events_history_info[-1].kills > self.player_events_history_info[-2].kills:
-            self.ex_actions.append(self.basic_action.chat(random.choice(self.taunt_msg)))
-
-        if self.chat_flag and len(self.player_events_history_info) > 2 and \
-                self.player_events_history_info[-1].is_alive is True \
-                    and self.player_events_history_info[-2].is_alive is False:
-            self.ex_actions.append(self.basic_action.chat(random.choice(self.dead_msg)))
-
-        if self.chat_flag and len(self.player_history_info) > 2 and \
-                self.player_history_info[-1].denies > self.player_history_info[-2].denies and \
-                    random.random() > 0.9 and self.state_machine.is_action_state('MODEL'):
-            self.ex_actions.append(self.basic_action.chat(random.choice(self.deny_msg)))
-
-        if self.chat_flag and len(self.player_history_info) > 2 and \
-                self.player_history_info[-1].last_hits > self.player_history_info[-2].last_hits and \
-                    random.random() > 0.9 and self.state_machine.is_action_state('MODEL'):
-            self.ex_actions.append(self.basic_action.chat(random.choice(self.deny_msg)))
 
     def skip_histroy(self):
         self.player_history_info = self.player_history_info[:-1]

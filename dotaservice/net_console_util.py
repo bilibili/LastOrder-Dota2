@@ -26,7 +26,7 @@ def monitor_log(session_folder, console_log, pattern_queue, result_queue):
 
     during_game_max_time = 1
 
-    with open(abs_glob, 'r') as f:
+    with open(abs_glob, 'r', encoding="UTF-8") as f:
         f.seek(0, 0)
         while True:
             # pattern format: dict
